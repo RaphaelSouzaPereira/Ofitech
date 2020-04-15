@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Mecanicas</name>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Mecânica Centro Car Ltda.</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.226484,-30.0347478,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Oficina do Alemão&Filho]]></name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2397631,-30.0359073,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Servipart</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2261342,-30.0274406,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Agil Recuperadora</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2269066,-30.0296006,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Assunção Centro Automotivo</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2052302,-30.0318289,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Centro Automotivo Mecânica Precisão</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.1710588,-30.0175928,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>F Tech Centro Automotivo</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.193061,-30.007092,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Confraria do Pneu - Centro Automotivo Multi Marcas</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2063367,-30.0091774,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ibacar Oficina Mecânica</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.215622,-30.024043,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Centro Sul Veículos</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2241938,-30.0447152,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Flávio Luiz Schutz</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.1999424,-30.0335006,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ibacar Oficina Mecânica</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.215622,-30.024043,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mecânica Centro Car Ltda.</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.226484,-30.0347478,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>FunBike Bicicletas</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2125681,-30.033634,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Auto Mecânica Raízes</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2069971,-30.0185789,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Assunção Centro Automotivo</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2052302,-30.0318289,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mecânica Piaseski Serviços Auto</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2147241,-30.023171,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mecânica Valério Car</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.1956054,-30.0389697,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EMEC Centro Automotivo Ltda</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.200537,-30.040942,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Hot Car Mecânica</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2031151,-30.0462517,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mecânica Lord Kar</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2261491,-30.043666,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mecânica Luis</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2253628,-30.0425774,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mecânica Boxcar</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2261696,-30.0442273,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mecânica 980 Injeção Eletrônica</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.221312,-30.043565,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Box Car Multimarcas</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.226228,-30.044242,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Zé Auto Elétrica</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2252135,-30.0415574,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chapeação pinturas e soldas - Oficina Cabral</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2255963,-30.0416943,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dornelas, Washington D R</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2244953,-30.0444682,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Martelinho de Ouro</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2202741,-30.0432344,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Jet Oil - Cidade Baixa</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2160308,-30.0412322,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Assunção Centro Automotivo</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2052302,-30.0318289,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dyegocar</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2081387,-30.0296886,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Flávio Luiz Schutz</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.1999424,-30.0335006,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Auto Service</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2046978,-30.0396476,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Auto Center</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2043021,-30.034219,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mtech Automotivos</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2042968,-30.032015,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>EMEC Centro Automotivo Ltda</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.200537,-30.040942,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Borracharia e Socorro Mecânico Tio Patinhas</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2129729,-30.0405215,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mecânica Valério Car</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.1956054,-30.0389697,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Getúlio Motos</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2039007,-30.0447653,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gigante Auto Mecânica</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2241285,-30.0471217,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mecânica Antares</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2251496,-30.0495201,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mecânica Conkar</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2209214,-30.0499855,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ayres Mecânica</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2161602,-30.0503872,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Gan Oficina Mecânica</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.22619,-30.0544199,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Lemos Manutenção de Veículos</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2217576,-30.0592137,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Climakas</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2180189,-30.059553,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Car Service Assessoria Automotiva Ltda.</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2281934,-30.0609648,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pronto Auto Mecânica Automotiva</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2217542,-30.059225,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Centro Sul Veículos</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -51.2241938,-30.0447152,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
