@@ -6,7 +6,7 @@ const routes = require('./routes');
 const app = express();
 
 //conexão com o banco 
-mongoose.connect('mongodb+srv://BuscaMecaninas:1@laranjaamarela@cluster0-xok1n.mongodb.net/buscaMecanica?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://BuscaMecaninas:admin@cluster0-xok1n.mongodb.net/buscaMecanica?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true
 }); 
