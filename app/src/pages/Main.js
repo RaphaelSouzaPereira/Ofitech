@@ -34,18 +34,26 @@ function Main({ navigation }) {
     }, []);
 
     async function loadMecanicas() {
-        const{ latitude, longitude } = currentRegion;
-
-        const response = await api.get('/search', {
-           params:{
-               latitude,
-               longitude,
-               servicos
-           },
-        }); 
-    
-    setMecanicas(response.data.mecanicas);        
-    } 
+        const { latitude, longitude } = currentRegion;
+        let response;
+        if(servicos !== ""){
+            response = await api.get("/search", {
+                params: {
+                  latitude,
+                  longitude,
+                  servicos,
+                },
+              });
+        }else{
+            response = await api.get("/search", {
+                params: {
+                  latitude,
+                  longitude
+                },
+              });
+        }
+           setMecanicas(response.data.mecanicas);
+      }
 
     //Preenche o estado da regiao toda vez que o usuario mexer no mapa
     function handleRegionChanged(region){
@@ -80,7 +88,14 @@ function Main({ navigation }) {
             <Callout
                 onPress={() => {
                 //navegação para a pasta de dados da mecanica
-                navigation.navigate('Mecanica', {mec}); //passar aqui o parametro que vai linkar a mecanica especifica
+                navigation.navigate('Mecanica', 
+                {name: mec.name, 
+                 telefone : mec.telefone,
+                 endereco: mec.endereco,
+                 email: mec.email,
+                 servicos: mec.servicos   
+                }
+                ); //passar aqui o parametro que vai linkar a mecanica especifica
             }}>
                 <View style={styles.callout}>
                     <Text style={styles.mecName}>{mec.name}</Text>
