@@ -25,7 +25,7 @@ const Routes = createAppContainer(
             headerTintColor: '#FFF', //cor da fonte do cabeçalho
             headerBackTitleVisible: null,
             headerStyle:{ //estilização para o cabeçalho
-                backgroundColor: '#31c4ed',
+                backgroundColor: '#00BFFF',
             }
         }
     })
