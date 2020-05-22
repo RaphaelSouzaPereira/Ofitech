@@ -3,8 +3,10 @@ const Avaliacao = require("../models/Avaliacao");
 
 module.exports = {
   async index(request, response) {
-    const { mecanicaId } = request.params;
-    const avaliacao = await Avaliacao.findByMecanicaId({ mecanicaId });
+    const {mecanicaId} = request.query;
+    console.log(mecanicaId);
+    const avaliacao = await Avaliacao.find({ mecanicaId: mecanicaId});
+    console.log(avaliacao);
     return response.json(avaliacao);
   },
 
