@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     width: 54,
     height: 54,
     borderRadius: 54/2,
-    borderWidth: 4,
+    borderWidth: 1.5,
     borderColor: "black",
   },
   callout: {

@@ -44,8 +44,8 @@ function Mecanica({ navigation }) {
           {avaliacoes.map((avaliacao) => (
             <>
               <Text key={avaliacao._id} style={styles.mecAvaliacao}>Descrição: {avaliacao.descricao}</Text>
-              <Text key={avaliacao._id} style={styles.mecAvaliacao}>Avaliação: {avaliacao.nota}</Text>
-              <Text key={avaliacao._id} style={styles.mecAvaliacao}>Média de valor: {avaliacao.valor}</Text>
+              <Text style={styles.mecAvaliacao}>Avaliação: {avaliacao.nota}</Text>
+              <Text style={styles.mecAvaliacao}>Média de valor: {avaliacao.valor}</Text>
             </>
           ))}
         </ScrollView>
