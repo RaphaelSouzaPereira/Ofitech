@@ -32,19 +32,18 @@ module.exports = {
   },
 
   async updateReview(request, response) {
-    const mecanicaId = request.query;
+    const { mecanicaId } = request.body;
 
     let mecanica = await Mecanica.findById(mecanicaId);
     const apiResponse = await axios.get(
       "http://localhost:3030/api/mediaAvaliacoes",
-      { query: { mecanicaId: mecanicaId } }
+      { params: { mecanicaId: mecanicaId } }
     );
+    mecanica.avaliacao = apiResponse.data.mediaAvaliacoes;
+    mecanica.preco = apiResponse.data.mediaPrecos;
 
-    mecanica.avaliacao = apiResponse.avaliacao;
-    mecanica.preco = apiResponse.preco;
-    
-    await Mecanica.save(mecanica);
-
-    return response.status(204);
+    await Mecanica.update(mecanica);
+    console.log("Atualizei a mecanica");
+    return response.status(204).json(mecanica);
   },
 };

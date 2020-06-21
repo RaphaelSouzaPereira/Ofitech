@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const AvaliacaoSchema = new mongoose.Schema(
   {
     descricao: String,
-    nota: String,
-    valor: String,
+    nota: Number,
+    valor: Number,
     userId: String,
     genero: String,
     mecanicaId: String,
