@@ -105,6 +105,8 @@ function Main({ navigation }) {
                   servicos: mec.servicos,
                   idUser: "useridteste",
                   genero: "feminino",
+                  avaliacaoMedia: mec.avaliacao,
+                  precoMedia: mec.preco,
                 }); //passar aqui o parametro que vai linkar a mecanica especifica
               }}
             >

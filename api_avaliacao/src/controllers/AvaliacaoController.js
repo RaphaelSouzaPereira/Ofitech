@@ -13,18 +13,27 @@ module.exports = {
   async store(request, response) {
     const { descricao, nota, valor, userId, genero, mecanicaId } = request.body;
 
-    //let avaliacao = await Avaliacao.findOne({ userId, mecanicaId });
+    let avaliacao = await Avaliacao.findOne({ userId, mecanicaId });
 
-    //if (!avaliacao) {
-    avaliacao = await Avaliacao.create({
-      descricao,
-      nota,
-      valor,
-      userId,
-      genero,
-      mecanicaId,
-    });
-    //}
+    if (!avaliacao) {
+      avaliacao = await Avaliacao.create({
+        descricao,
+        nota,
+        valor,
+        userId,
+        genero,
+        mecanicaId,
+      });
+    }else{
+      avaliacao = await Avaliacao.update({
+        descricao,
+        nota,
+        valor,
+        userId,
+        genero,
+        mecanicaId,
+      });
+    }
     const apiResponse = await axios.put("http://localhost:3031/api/mecanica", {
       mecanicaId: mecanicaId,
     });
@@ -59,8 +68,8 @@ module.exports = {
     });
     mediaAvaliacoes = valorTotalDasAvaliacoes / contador;
     mediaPrecos = valorTotalDosPrecos / contador;
-    console.log(mediaAvaliacoes)
-    console.log(mediaPrecos)
+    console.log(mediaAvaliacoes);
+    console.log(mediaPrecos);
     return response.json({ mediaAvaliacoes, mediaPrecos });
   },
 
