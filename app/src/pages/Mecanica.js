@@ -40,7 +40,7 @@ function Mecanica({ navigation }) {
           mecanicaId,
         },
       });
-      console.log(response.data);
+
       setFemin(response.data);
     }
 
@@ -49,9 +49,7 @@ function Mecanica({ navigation }) {
   }, []);
 
   function RenderElement() {
-    console.log("entrei no render");
     if (femin) {
-      console.log("entrei no femin");
       return (
         <MaterialIcons
           style={styles.femin}

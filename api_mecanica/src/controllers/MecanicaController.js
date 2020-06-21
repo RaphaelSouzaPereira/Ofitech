@@ -43,7 +43,7 @@ module.exports = {
     mecanica.preco = apiResponse.data.mediaPrecos;
 
     await Mecanica.update(mecanica);
-    console.log("Atualizei a mecanica");
+
     return response.status(204).json(mecanica);
   },
 };
