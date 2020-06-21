@@ -12,6 +12,8 @@ const MecanicasSchema = new mongoose.Schema({
     type: PointSchema,
     index: "2dsphere", //tipo de index para ponto de latitude e longitude
   },
+  avaliacao: Number,
+  preco: Number,
 });
 
 module.exports = mongoose.model("Mecanicas", MecanicasSchema);
