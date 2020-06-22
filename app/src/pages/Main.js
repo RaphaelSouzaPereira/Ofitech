@@ -13,13 +13,16 @@ import {
   getCurrentPositionAsync,
 } from "expo-location";
 import { MaterialIcons } from "@expo/vector-icons";
-
+import { Rating } from "react-native-elements";
 import api from "../services/api";
 
 function Main({ navigation }) {
   const [mecanicas, setMecanicas] = useState([]);
   const [currentRegion, setCurrentRegion] = useState(null);
   const [servicos, setServicos] = useState("");
+  const [avaliacao, onChangeAvaliacao] = useState(0);
+  const [preco, onChangePreco] = useState(0);
+  const DOLAR_IMAGE = require("../img/dolar.png");
 
   useEffect(() => {
     //função que vai carregar a posição inicial do mapa
@@ -46,12 +49,65 @@ function Main({ navigation }) {
   async function loadMecanicas() {
     const { latitude, longitude } = currentRegion;
     let response;
-    if (servicos !== "") {
+    if (servicos !== "" && avaliacao !== 0 && preco !== 0) {
       response = await api.get("/search", {
         params: {
           latitude,
           longitude,
           servicos,
+          avaliacao,
+          preco,
+        },
+      });
+    } else if (servicos !== "" && avaliacao == 0 && preco !== 0) {
+      response = await api.get("/search", {
+        params: {
+          latitude,
+          longitude,
+          servicos,
+          preco,
+        },
+      });
+    } else if (servicos !== "" && avaliacao !== 0 && preco == 0) {
+      response = await api.get("/search", {
+        params: {
+          latitude,
+          longitude,
+          servicos,
+          avaliacao,
+        },
+      });
+    } else if (servicos == "" && avaliacao !== 0 && preco !== 0) {
+      response = await api.get("/search", {
+        params: {
+          latitude,
+          longitude,
+          avaliacao,
+          preco,
+        },
+      });
+    } else if (servicos !== "" && avaliacao == 0 && preco == 0) {
+      response = await api.get("/search", {
+        params: {
+          latitude,
+          longitude,
+          servicos,
+        },
+      });
+    } else if (servicos == "" && avaliacao !== 0 && preco == 0) {
+      response = await api.get("/search", {
+        params: {
+          latitude,
+          longitude,
+          avaliacao,
+        },
+      });
+    } else if (servicos == "" && avaliacao == 0 && preco !== 0) {
+      response = await api.get("/search", {
+        params: {
+          latitude,
+          longitude,
+          preco,
         },
       });
     } else {
@@ -63,6 +119,8 @@ function Main({ navigation }) {
       });
     }
     setMecanicas(response.data.mecanicas);
+    onChangeAvaliacao(0);
+    onChangePreco(0);
   }
 
   //Preenche o estado da regiao toda vez que o usuario mexer no mapa
@@ -136,6 +194,31 @@ function Main({ navigation }) {
           <MaterialIcons name="my-location" size={20} color="#FFF" />
         </TouchableOpacity>
       </View>
+      <View>
+        <Rating
+          showRating
+          startingValue={0}
+          fractions={1}
+          onFinishRating={onChangeAvaliacao}
+          style={styles.searchFilter1}
+          ratingBackgroundColor="#00BFFF"
+          ratingColor="#00BFFF"
+          imageSize={20}
+        />
+        <Rating
+          type="custom"
+          showRating
+          startingValue={0}
+          ratingImage={DOLAR_IMAGE}
+          ratingColor="green"
+          ratingBackgroundColor="#00BFFF"
+          ratingCount={3}
+          fractions={1}
+          imageSize={20}
+          onFinishRating={onChangePreco}
+          style={styles.searchFilter2}
+        />
+      </View>
     </>
   );
 }
@@ -147,7 +230,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 54,
     height: 54,
-    borderRadius: 54/2,
+    borderRadius: 54 / 2,
     borderWidth: 1.5,
     borderColor: "black",
   },
@@ -197,6 +280,24 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginLeft: 15,
+  },
+  searchFilter1: {
+    //position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 5,
+    flexDirection: "row",
+    backgroundColor: "#00BFFF",
+  },
+  searchFilter2: {
+    //position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 5,
+    flexDirection: "row",
+    backgroundColor: "#00BFFF",
   },
 });
 

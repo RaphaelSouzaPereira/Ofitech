@@ -20,10 +20,10 @@ module.exports = {
           $in: servicosArray, //busca por todos os filtros
         },
         avaliacao: {
-          $in: avaliacao, //busca por todos os filtros
+          $gte: avaliacao, //busca por todos os filtros
         },
         preco: {
-          $in: preco, //busca por todos os filtros
+          $gte: preco, //busca por todos os filtros
         },
         location: {
           $near: {
@@ -47,10 +47,10 @@ module.exports = {
     ) {
       mecanicas = await Mecanica.find({
         avaliacao: {
-          $in: avaliacao, //busca por todos os filtros
+          $gte: avaliacao, //busca por todos os filtros
         },
         preco: {
-          $in: preco, //busca por todos os filtros
+          $gte: preco, //busca por todos os filtros
         },
         location: {
           $near: {
@@ -78,7 +78,7 @@ module.exports = {
           $in: servicosArray, //busca por todos os filtros
         },
         preco: {
-          $in: preco, //busca por todos os filtros
+          $gte: preco, //busca por todos os filtros
         },
         location: {
           $near: {
@@ -106,7 +106,7 @@ module.exports = {
           $in: servicosArray, //busca por todos os filtros
         },
         avaliacao: {
-          $in: avaliacao, //busca por todos os filtros
+          $gte: avaliacao, //busca por todos os filtros
         },
         location: {
           $near: {
@@ -155,7 +155,7 @@ module.exports = {
     ) {
       mecanicas = await Mecanica.find({
         avaliacao: {
-          $in: avaliacao, //busca por todos os filtros
+          $gte: avaliacao, //busca por todos os filtros
         },
         location: {
           $near: {
@@ -179,7 +179,7 @@ module.exports = {
     ) {
       mecanicas = await Mecanica.find({
         preco: {
-          $in: preco, //busca por todos os filtros
+          $gte: preco, //busca por todos os filtros
         },
         location: {
           $near: {

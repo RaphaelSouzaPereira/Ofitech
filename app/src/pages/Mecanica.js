@@ -17,6 +17,7 @@ function Mecanica({ navigation }) {
   const [avaliacoes, setAvaliacoes] = useState([]);
   const DOLAR_IMAGE = require("../img/dolar.png");
   const [femin, setFemin] = useState(false);
+
   useEffect(() => {
     async function loadAvaliacoes() {
       const mecanicaId = navigation.getParam("id");
@@ -86,8 +87,9 @@ function Mecanica({ navigation }) {
           <Rating
             imageSize={20}
             readonly
-            fractions="{1}"
+            fractions={1}
             startingValue={navigation.getParam("avaliacaoMedia")}
+            
           />
           <Rating
             type="custom"
@@ -106,8 +108,8 @@ function Mecanica({ navigation }) {
         <SafeAreaView style={styles.containerSafe}>
           <ScrollView style={styles.scrollView}>
             {avaliacoes.map((avaliacao) => (
-              <>
-                <Text key={avaliacao._id} style={styles.mecAvaliacao}>
+              <View key={avaliacao._id}>
+                <Text style={styles.mecAvaliacao}>
                   Descrição: {avaliacao.descricao}
                 </Text>
                 <Text style={styles.mecAvaliacao}>Avaliação:</Text>
@@ -117,7 +119,7 @@ function Mecanica({ navigation }) {
                   fractions={1}
                   startingValue={avaliacao.nota}
                 />
-              </>
+              </View>
             ))}
           </ScrollView>
         </SafeAreaView>

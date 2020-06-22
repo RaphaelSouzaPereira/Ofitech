@@ -1,7 +1,7 @@
 import React, { useState, useEffect, onChangeText } from "react";
 import { StyleSheet, Text, TextInput, View, Button } from "react-native";
 import Constants from "expo-constants";
-import { Rating, CheckBox } from "react-native-elements";
+import { Rating } from "react-native-elements";
 import apiAvaliacao from "../services/apiAvaliacao";
 
 function Avaliacao({ navigation }) {
@@ -27,7 +27,7 @@ function Avaliacao({ navigation }) {
       genero: genero,
       mecanicaId: id,
     });
-    navigation.navigate("Mecanica");
+    navigation.navigate("Main");
   }
 
   return (
