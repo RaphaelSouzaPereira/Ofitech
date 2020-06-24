@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiAvaliacao = axios.create({
-    baseURL:'http://192.168.25.7:3030',    
+    baseURL:'https://ofitech-avaliacao.herokuapp.com/',    
 });
 
 export default apiAvaliacao;

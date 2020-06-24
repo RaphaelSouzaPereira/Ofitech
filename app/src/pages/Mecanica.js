@@ -55,7 +55,7 @@ function Mecanica({ navigation }) {
         <MaterialIcons
           style={styles.femin}
           name="stars"
-          size={20}
+          size={30}
           color="#800000"
         />
       );
@@ -67,31 +67,23 @@ function Mecanica({ navigation }) {
     <>
       <>
         <View style={styles.container}>
-          <Text style={styles.mecInfo}>{navigation.getParam("name")}</Text>
-          <Text style={styles.mecInfo}>
-            Servicos: {navigation.getParam("servicos").join(", ")}
-          </Text>
-          <Text style={styles.mecInfo}>
-            Telefone: {navigation.getParam("telefone")}
-          </Text>
-          <Text style={styles.mecInfo}>
-            Endereço: {navigation.getParam("endereco")}
-          </Text>
-          <Text style={styles.mecInfo}>
-            Email: {navigation.getParam("email")}
-          </Text>
-          <Text style={styles.mecInfo}>
-            Site: {navigation.getParam("site")}
-          </Text>
-          <Text style={styles.mecInfo}>Horario: 08:00 ás 18:00</Text>
+          <Text style={styles.mecName}>{navigation.getParam("name")}</Text>
+          <Text style={styles.mecInfo}><Text style={styles.desc}>Horario:</Text> 08:00 ás 18:00</Text>       
+          <Text style={styles.mecInfo}><Text style={styles.desc}>Telefone:</Text> {navigation.getParam("telefone")}</Text>
+          <Text style={styles.mecInfo}><Text style={styles.desc}>Endereço:</Text> {navigation.getParam("endereco")}</Text>
+          <Text style={styles.mecInfo}><Text style={styles.desc}>Email:</Text> {navigation.getParam("email")}</Text>
+          <Text style={styles.mecInfo}><Text style={styles.desc}>Site:</Text> {navigation.getParam("site")}</Text>
+          <Text style={styles.mecInfo}><Text style={styles.desc}>Servicos:</Text> {navigation.getParam("servicos").join(", ")}</Text>
+          <RenderElement />
           <Rating
+          style={styles.aval}
             imageSize={20}
             readonly
             fractions={1}
             startingValue={navigation.getParam("avaliacaoMedia")}
-            
           />
           <Rating
+            style={styles.dolar}
             type="custom"
             ratingImage={DOLAR_IMAGE}
             ratingCount={3}
@@ -100,8 +92,7 @@ function Mecanica({ navigation }) {
             fractions={1}
             readonly
             startingValue={navigation.getParam("avaliacaoPreco")}
-          />
-          <RenderElement />
+          />          
         </View>
       </>
       <>
@@ -109,11 +100,9 @@ function Mecanica({ navigation }) {
           <ScrollView style={styles.scrollView}>
             {avaliacoes.map((avaliacao) => (
               <View key={avaliacao._id}>
-                <Text style={styles.mecAvaliacao}>
-                  Descrição: {avaliacao.descricao}
-                </Text>
-                <Text style={styles.mecAvaliacao}>Avaliação:</Text>
-                <Rating
+                <Text style={styles.mecAvaliacao}>Descrição: {avaliacao.descricao}</Text>
+              <Rating
+                  style={styles.aval}
                   imageSize={20}
                   readonly
                   fractions={1}
@@ -132,9 +121,9 @@ function Mecanica({ navigation }) {
               idUser: "useridtestebbb",
             });
           }}
+          style={styles.avaliar}
           title="Avaliar"
-          color="#841584"
-        />
+         />
       </>
     </>
   );
@@ -142,32 +131,56 @@ function Mecanica({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    marginTop: Constants.statusBarHeight,
-    backgroundColor: "white",
+    flex: 2,
+    marginTop: Constants.statusBarCenter,
+    backgroundColor: "#F0F8FF",
   },
   containerSafe: {
     flex: 1,
-    marginTop: Constants.statusBarHeight,
-    backgroundColor: "white",
+    marginTop:Constants.statusBarCenter,
+    backgroundColor: "#87CEEB",
   },
   scrollView: {
-    backgroundColor: "white",
+    backgroundColor: "#87CEEB",
     marginHorizontal: 20,
   },
-  mecInfo: {
+  desc:{
+    fontWeight: "bold",
+  },
+  mecName:{
+    marginTop: 15,
+    fontWeight: "bold",
+    alignSelf: 'center',
+    fontSize: 20
+  },
+   mecInfo: {
+    color: '#4F4F4F',
     fontSize: 16,
     marginTop: 10,
+    width: 300,
+    alignSelf:"center",
   },
   mecButton: {
     backgroundColor: "red",
   },
   mecAvaliacao: {
     fontSize: 16,
+    color: '#4F4F4F',
+    marginTop: 10,
+    width: 300,
+    alignSelf:"center",
   },
   femin: {
+    marginTop:5,
+    alignSelf:"center",
     flexDirection: "row-reverse",
   },
+  dolar:{
+    marginTop: 15,
+  },
+  aval:{
+    marginTop: 10,
+  }
 });
 
 export default Mecanica;

@@ -150,7 +150,7 @@ function Main({ navigation }) {
               latitude: mec.location.coordinates[1],
             }}
           >
-            <Image style={styles.icon} source={require("../img/icon2.jpg")} />
+            <Image style={styles.icon} source={require("../img/icon3.png")} />
             <Callout
               onPress={() => {
                 //navegação para a pasta de dados da mecanica
@@ -228,11 +228,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   icon: {
-    width: 54,
-    height: 54,
+    width: 35,
+    height: 35,
     borderRadius: 54 / 2,
     borderWidth: 1.5,
-    borderColor: "black",
+   
   },
   callout: {
     width: 260,

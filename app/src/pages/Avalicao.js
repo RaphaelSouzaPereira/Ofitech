@@ -33,17 +33,18 @@ function Avaliacao({ navigation }) {
   return (
     <>
       <View style={styles.container}>
-        <Text style={styles.mecInfo}>Descrição:</Text>
+        <Text style={styles.info}>Descrição:</Text>
         <TextInput
-          style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+          style={styles.avaliaInput} 
           onChangeText={(text) => onChangeText(text)}
         />
-        <Text style={styles.mecInfo}>Genêro:</Text>
+        <Text style={styles.info}>Genêro:</Text>
         <TextInput
-          style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+          style={styles.avaliaInput}
           onChangeText={(text) => onChangeGenero(text)}
         />
         <Rating
+          style={styles.aval}
           showRating
           startingValue={3}
           fractions={1}
@@ -51,6 +52,7 @@ function Avaliacao({ navigation }) {
           style={{ paddingVertical: 10 }}
         />
         <Rating
+          style={styles.dolar}
           type="custom"
           showRating
           startingValue={2}
@@ -76,7 +78,6 @@ function Avaliacao({ navigation }) {
             )
           }
           title="Finalizar"
-          color="#841584"
         />
       </>
     </>
@@ -89,6 +90,28 @@ const styles = StyleSheet.create({
     marginTop: Constants.statusBarHeight,
     backgroundColor: "white",
   },
+  info: {
+    color: '#4F4F4F',
+    fontSize: 16,
+    marginTop: 10,
+    width: 340,
+    alignSelf:"center",
+  },
+  avaliaInput:{
+    height: 50,
+    backgroundColor: "#fff",
+    color: "#333",
+    borderRadius: 25,
+    paddingHorizontal: 10,
+    fontSize: 16,
+    shadowColor: "#000", //sombra ios
+    shadowOpacity: 0.2,
+    shadowOffset: {
+      width: 4,
+      height: 4,
+    },
+    elevation: 2, //sombra android
+  }
 });
 
 export default Avaliacao;
