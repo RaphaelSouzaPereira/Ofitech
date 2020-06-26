@@ -50,6 +50,7 @@ function Main({ navigation }) {
     const { latitude, longitude } = currentRegion;
     let response;
     if (servicos !== "" && avaliacao !== 0 && preco !== 0) {
+      console.log('entrei no servico avaliacao preco');
       response = await api.get("/search", {
         params: {
           latitude,
@@ -60,6 +61,7 @@ function Main({ navigation }) {
         },
       });
     } else if (servicos !== "" && avaliacao == 0 && preco !== 0) {
+      console.log('entrei no servico sem avaliacao preco');
       response = await api.get("/search", {
         params: {
           latitude,
@@ -69,6 +71,7 @@ function Main({ navigation }) {
         },
       });
     } else if (servicos !== "" && avaliacao !== 0 && preco == 0) {
+      console.log('entrei no servico avaliacao sem preco');
       response = await api.get("/search", {
         params: {
           latitude,
@@ -78,6 +81,7 @@ function Main({ navigation }) {
         },
       });
     } else if (servicos == "" && avaliacao !== 0 && preco !== 0) {
+      console.log('entrei no sem servico avaliacao preco');
       response = await api.get("/search", {
         params: {
           latitude,
@@ -87,6 +91,7 @@ function Main({ navigation }) {
         },
       });
     } else if (servicos !== "" && avaliacao == 0 && preco == 0) {
+      console.log('entrei no servico sem avaliacao sem preco');
       response = await api.get("/search", {
         params: {
           latitude,
@@ -95,6 +100,7 @@ function Main({ navigation }) {
         },
       });
     } else if (servicos == "" && avaliacao !== 0 && preco == 0) {
+      console.log('entrei no sem servico avaliacao sem preco');
       response = await api.get("/search", {
         params: {
           latitude,
@@ -103,6 +109,7 @@ function Main({ navigation }) {
         },
       });
     } else if (servicos == "" && avaliacao == 0 && preco !== 0) {
+      console.log('entrei no sem servico sem avaliacao preco');
       response = await api.get("/search", {
         params: {
           latitude,
@@ -111,6 +118,7 @@ function Main({ navigation }) {
         },
       });
     } else {
+      console.log('entrei no sem servico sem avaliacao sem preco');
       response = await api.get("/search", {
         params: {
           latitude,
@@ -121,6 +129,7 @@ function Main({ navigation }) {
     setMecanicas(response.data.mecanicas);
     onChangeAvaliacao(0);
     onChangePreco(0);
+    setServicos("");
   }
 
   //Preenche o estado da regiao toda vez que o usuario mexer no mapa

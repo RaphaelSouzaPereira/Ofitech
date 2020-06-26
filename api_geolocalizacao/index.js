@@ -17,4 +17,4 @@ app.use(express.json());
 app.use(routes);
 
 //executa localhot:3434
-app.listen(3434);
+app.listen(process.env.PORT || "3434");

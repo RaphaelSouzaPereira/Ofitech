@@ -19,7 +19,7 @@ function Avaliacao({ navigation }) {
     descricao,
     genero
   ) {
-    let response = await apiAvaliacao.post("/api/avaliacao", {
+    await apiAvaliacao.post("/api/avaliacao", {
       descricao: descricao,
       nota: avaliacao,
       valor: preco,
