@@ -23,12 +23,14 @@ function Avaliacao({ navigation }) {
   ) {
 
     let name; 
-   if (name = " "){
+   if (name == " "){
       name = "Anônimo";
     } else{
       name = nome;
     }
    console.log(name)
+   console.log(nome)
+
     await apiAvaliacao.post("/api/avaliacao", {
       descricao: descricao,
       nota: avaliacao,

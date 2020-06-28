@@ -55,7 +55,7 @@ function Mecanica({ navigation }) {
         <MaterialIcons
           style={styles.femin}
           name="stars"
-          size={30}
+          size={20}
           color="#800000"
         />
       );
@@ -77,7 +77,7 @@ function Mecanica({ navigation }) {
           <RenderElement />
           <Rating
           style={styles.aval}
-            imageSize={20}
+            imageSize={18}
             readonly
             fractions={1}
             startingValue={navigation.getParam("avaliacaoMedia")}
@@ -88,7 +88,7 @@ function Mecanica({ navigation }) {
             ratingImage={DOLAR_IMAGE}
             ratingCount={3}
             ratingColor="green"
-            imageSize={20}
+            imageSize={18}
             fractions={1}
             readonly
             startingValue={navigation.getParam("precoMedia")}
@@ -104,7 +104,7 @@ function Mecanica({ navigation }) {
                 <Text style={styles.mecAvaliacao}>Descrição: {avaliacao.descricao}</Text>
               <Rating
                   style={styles.aval}
-                  imageSize={20}
+                  imageSize={15}
                   readonly
                   fractions={1}
                   startingValue={avaliacao.nota}
@@ -149,15 +149,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   mecName:{
-    marginTop: 15,
+    marginTop: 13,
     fontWeight: "bold",
     alignSelf: 'center',
     fontSize: 20
   },
    mecInfo: {
     color: '#4F4F4F',
-    fontSize: 16,
-    marginTop: 10,
+    fontSize: 14,
+    marginTop: 8,
     width: 300,
     alignSelf:"center",
   },
@@ -165,9 +165,9 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
   },
   mecAvaliacao: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#4F4F4F',
-    marginTop: 10,
+    marginTop: 7,
     width: 300,
     alignSelf:"center",
   },
@@ -177,10 +177,10 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
   },
   dolar:{
-    marginTop: 15,
+    marginTop: 5,
   },
   aval:{
-    marginTop: 10,
+    marginTop: 5,
   }
 });
 
