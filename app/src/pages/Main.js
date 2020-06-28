@@ -168,13 +168,21 @@ function Main({ navigation }) {
                 }); //passar aqui o parametro que vai linkar a mecanica especifica
               }}
             >
-              <View style={styles.callout}>
+            <View style={styles.callout}>
                 <Text style={styles.mecName}>{mec.name}</Text>
                 <Text style={styles.mecServicos}>
                   {mec.servicos.join(", ")}
                 </Text>
                 <Text style={styles.mecTel}>{mec.telefone}</Text>
+                <Rating
+                  imageSize={50}
+                  readonly
+                  fractions={1}
+                  startingValue={1}
+                />
               </View>
+            <View>
+            </View>  
             </Callout>
           </Marker>
         ))}
@@ -232,10 +240,10 @@ const styles = StyleSheet.create({
     height: 35,
     borderRadius: 54 / 2,
     borderWidth: 1.5,
-   
+
   },
   callout: {
-    width: 260,
+    width: 270,    
   },
   mecName: {
     fontWeight: "bold",
