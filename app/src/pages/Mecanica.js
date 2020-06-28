@@ -100,6 +100,7 @@ function Mecanica({ navigation }) {
           <ScrollView style={styles.scrollView}>
             {avaliacoes.map((avaliacao) => (
               <View key={avaliacao._id}>
+                <Text style={styles.mecAvaliacao}>Nome: {avaliacao.nome}</Text>
                 <Text style={styles.mecAvaliacao}>Descrição: {avaliacao.descricao}</Text>
               <Rating
                   style={styles.aval}
