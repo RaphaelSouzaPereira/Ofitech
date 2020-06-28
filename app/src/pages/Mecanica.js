@@ -91,7 +91,7 @@ function Mecanica({ navigation }) {
             imageSize={20}
             fractions={1}
             readonly
-            startingValue={navigation.getParam("avaliacaoPreco")}
+            startingValue={navigation.getParam("precoMedia")}
           />          
         </View>
       </>
