@@ -28,15 +28,12 @@ function Avaliacao({ navigation }) {
     genero,
     nome
   ) {
-
-    let name; 
-   if (name == " "){
+    let name;
+    if (name == " ") {
       name = "Anônimo";
-    } else{
+    } else {
       name = nome;
     }
-   console.log(name)
-   console.log(nome)
 
     await apiAvaliacao.post("/api/avaliacao", {
       descricao: descricao,
@@ -48,15 +45,14 @@ function Avaliacao({ navigation }) {
       nome: name,
     });
     navigation.navigate("Main");
-   }
-
+  }
 
   return (
     <>
       <View style={styles.container}>
-      <Text style={styles.info}>Nome:</Text>
+        <Text style={styles.info}>Nome:</Text>
         <TextInput
-          style={styles.avaliaInput} 
+          style={styles.avaliaInput}
           onChangeText={(text) => onChangeNome(text)}
         />
         <Text style={styles.info}>Descrição:</Text>
