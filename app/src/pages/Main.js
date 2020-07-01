@@ -13,8 +13,9 @@ import {
   getCurrentPositionAsync,
 } from "expo-location";
 import { MaterialIcons } from "@expo/vector-icons";
-import { Rating } from "react-native-elements";
+import { Rating, Tooltip } from "react-native-elements";
 import api from "../services/api";
+
 
 function Main({ navigation }) {
   const [mecanicas, setMecanicas] = useState([]);
@@ -183,12 +184,6 @@ function Main({ navigation }) {
                   {mec.servicos.join(", ")}
                 </Text>
                 <Text style={styles.mecTel}>{mec.telefone}</Text>
-                <Rating
-                  imageSize={50}
-                  readonly
-                  fractions={1}
-                  startingValue={1}
-                />
               </View>
             <View>
             </View>  
@@ -212,7 +207,8 @@ function Main({ navigation }) {
         </TouchableOpacity>
       </View>
       <View>
-        <Rating
+       <Tooltip containerStyle={styles.tool} popover={<Text>Pressione para o lado para selecionar o valor inicial da avaliação desejada.</Text>}>
+         <Rating
           showRating
           startingValue={0}
           fractions={1}
@@ -222,6 +218,8 @@ function Main({ navigation }) {
           ratingColor="#00BFFF"
           imageSize={20}
         />
+      </Tooltip>
+      <Tooltip containerStyle={styles.tool} popover={<Text>Pressione para o lado para selecionar o valor inicial da média de preço desejada.</Text>}>
         <Rating
           type="custom"
           showRating
@@ -235,6 +233,7 @@ function Main({ navigation }) {
           onFinishRating={onChangePreco}
           style={styles.searchFilter2}
         />
+      </Tooltip>
       </View>
     </>
   );
@@ -252,7 +251,7 @@ const styles = StyleSheet.create({
 
   },
   callout: {
-    width: 270,    
+    width: 260,    
   },
   mecName: {
     fontWeight: "bold",
@@ -316,6 +315,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: "#00BFFF",
   },
+  tool:{
+    width: 200,
+    height: 60,
+    backgroundColor: "#87CEEB",
+    color: '#4F4F4F',
+    fontSize: 16,
+   }
 });
 
 export default Main;

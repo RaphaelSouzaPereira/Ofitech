@@ -17,6 +17,7 @@ function Avaliacao({ navigation }) {
   const [avaliacao, onChangeAvaliacao] = useState(3);
   const [preco, onChangePreco] = useState(2);
   const DOLAR_IMAGE = require("../img/dolar.png");
+  const [nome, onChangeNome] = useState("");
 
   async function finalizarAvaliacao(
     id,
@@ -24,8 +25,19 @@ function Avaliacao({ navigation }) {
     avaliacao,
     preco,
     descricao,
-    genero
+    genero,
+    nome
   ) {
+
+    let name; 
+   if (name == " "){
+      name = "Anônimo";
+    } else{
+      name = nome;
+    }
+   console.log(name)
+   console.log(nome)
+
     await apiAvaliacao.post("/api/avaliacao", {
       descricao: descricao,
       nota: avaliacao,
@@ -33,13 +45,20 @@ function Avaliacao({ navigation }) {
       userId: idUser,
       genero: genero,
       mecanicaId: id,
+      nome: name,
     });
     navigation.navigate("Main");
-  }
+   }
+
 
   return (
     <>
       <View style={styles.container}>
+      <Text style={styles.info}>Nome:</Text>
+        <TextInput
+          style={styles.avaliaInput} 
+          onChangeText={(text) => onChangeNome(text)}
+        />
         <Text style={styles.info}>Descrição:</Text>
         <TextInput
           style={styles.avaliaInput}
@@ -87,7 +106,8 @@ function Avaliacao({ navigation }) {
               avaliacao,
               preco,
               descricao,
-              genero
+              genero,
+              nome
             )
           }
           title="Finalizar"
