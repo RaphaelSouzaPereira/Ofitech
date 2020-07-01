@@ -1,12 +1,19 @@
 import React, { useState, useEffect, onChangeText } from "react";
-import { StyleSheet, Text, TextInput, View, Button } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  Button,
+  Picker,
+} from "react-native";
 import Constants from "expo-constants";
 import { Rating } from "react-native-elements";
 import apiAvaliacao from "../services/apiAvaliacao";
 
 function Avaliacao({ navigation }) {
   const [descricao, onChangeText] = useState("");
-  const [genero, onChangeGenero] = useState("");
+  const [genero, onChangeGenero] = useState("outro");
   const [avaliacao, onChangeAvaliacao] = useState(3);
   const [preco, onChangePreco] = useState(2);
   const DOLAR_IMAGE = require("../img/dolar.png");
@@ -35,14 +42,20 @@ function Avaliacao({ navigation }) {
       <View style={styles.container}>
         <Text style={styles.info}>Descrição:</Text>
         <TextInput
-          style={styles.avaliaInput} 
+          style={styles.avaliaInput}
           onChangeText={(text) => onChangeText(text)}
         />
+
         <Text style={styles.info}>Genêro:</Text>
-        <TextInput
+        <Picker
+          selectedValue={genero}
           style={styles.avaliaInput}
-          onChangeText={(text) => onChangeGenero(text)}
-        />
+          onValueChange={(text) => onChangeGenero(text)}
+        >
+          <Picker.Item label="feminino" value="feminino" />
+          <Picker.Item label="masculino" value="masculino" />
+          <Picker.Item label="outro" value="outro" />
+        </Picker>
         <Rating
           style={styles.aval}
           showRating
@@ -91,13 +104,13 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   info: {
-    color: '#4F4F4F',
+    color: "#4F4F4F",
     fontSize: 16,
     marginTop: 10,
     width: 340,
-    alignSelf:"center",
+    alignSelf: "center",
   },
-  avaliaInput:{
+  avaliaInput: {
     height: 50,
     backgroundColor: "#fff",
     color: "#333",
@@ -111,7 +124,7 @@ const styles = StyleSheet.create({
       height: 4,
     },
     elevation: 2, //sombra android
-  }
+  },
 });
 
 export default Avaliacao;
