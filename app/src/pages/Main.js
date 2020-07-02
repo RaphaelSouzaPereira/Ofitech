@@ -15,6 +15,7 @@ import {
 import { MaterialIcons } from "@expo/vector-icons";
 import { Rating, Tooltip } from "react-native-elements";
 import api from "../services/api";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 function Main({ navigation }) {
@@ -206,9 +207,8 @@ function Main({ navigation }) {
           <MaterialIcons name="my-location" size={20} color="#FFF" />
         </TouchableOpacity>
       </View>
-      <View>
-       <Tooltip containerStyle={styles.tool} popover={<Text>Pressione para o lado para selecionar o valor inicial da avaliação desejada.</Text>}>
-         <Rating
+      <View style={styles.viewFiltro}>
+       <Rating
           showRating
           startingValue={0}
           fractions={1}
@@ -218,9 +218,12 @@ function Main({ navigation }) {
           ratingColor="#00BFFF"
           imageSize={20}
         />
+      <Tooltip containerStyle={styles.tool} popover={<Text>Pressione para o lado para selecionar o valor inicial da avaliação desejada.</Text>}>  
+          <MaterialIcons style={styles.exclamac} name="info" size={20} color="#ffffff"/>
       </Tooltip>
-      <Tooltip containerStyle={styles.tool} popover={<Text>Pressione para o lado para selecionar o valor inicial da média de preço desejada.</Text>}>
-        <Rating
+      </View>
+      <View style={styles.viewFiltro}>
+       <Rating
           type="custom"
           showRating
           startingValue={0}
@@ -233,6 +236,8 @@ function Main({ navigation }) {
           onFinishRating={onChangePreco}
           style={styles.searchFilter2}
         />
+      <Tooltip containerStyle={styles.tool} popover={<Text>Pressione para o lado para selecionar o valor inicial da média de preço desejada.</Text>}>
+      <MaterialIcons style={styles.exclamac} name="info" size={20} color="#ffffff"/>
       </Tooltip>
       </View>
     </>
@@ -321,6 +326,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#87CEEB",
     color: '#4F4F4F',
     fontSize: 16,
+   },
+   exclamac:{
+     backgroundColor: "#00BFFF",
+     marginLeft: 10
+   },
+   viewFiltro:{
+     flex: 0.1,
+     alignItems: "center",
+     flexDirection: "row",
+     backgroundColor: "#00BFFF"
    }
 });
 

@@ -54,8 +54,8 @@ function Mecanica({ navigation }) {
       return (
         <MaterialIcons
           style={styles.femin}
-          name="stars"
-          size={20}
+          name="loyalty"
+          size={35}
           color="#800000"
         />
       );
@@ -67,17 +67,19 @@ function Mecanica({ navigation }) {
     <>
       <>
         <View style={styles.container}>
-          <Text style={styles.mecName}>{navigation.getParam("name")}</Text>
-          <Text style={styles.mecInfo}><Text style={styles.desc}>Horario:</Text> 08:00 ás 18:00</Text>       
+          <View style={styles.view}>
+            <Text style={styles.mecName}>{navigation.getParam("name")}</Text>
+            <RenderElement />
+          </View>
+          <Text style={styles.mecInfo}><Text style={styles.desc}>Horario:</Text> 08:00 ás 18:00</Text>
           <Text style={styles.mecInfo}><Text style={styles.desc}>Telefone:</Text> {navigation.getParam("telefone")}</Text>
           <Text style={styles.mecInfo}><Text style={styles.desc}>Endereço:</Text> {navigation.getParam("endereco")}</Text>
           <Text style={styles.mecInfo}><Text style={styles.desc}>Email:</Text> {navigation.getParam("email")}</Text>
           <Text style={styles.mecInfo}><Text style={styles.desc}>Site:</Text> {navigation.getParam("site")}</Text>
           <Text style={styles.mecInfo}><Text style={styles.desc}>Servicos:</Text> {navigation.getParam("servicos").join(", ")}</Text>
-          <RenderElement />
           <Rating
-          style={styles.aval}
-            imageSize={18}
+            style={styles.aval}
+            imageSize={25}
             readonly
             fractions={1}
             startingValue={navigation.getParam("avaliacaoMedia")}
@@ -88,11 +90,11 @@ function Mecanica({ navigation }) {
             ratingImage={DOLAR_IMAGE}
             ratingCount={3}
             ratingColor="green"
-            imageSize={18}
+            imageSize={25}
             fractions={1}
             readonly
             startingValue={navigation.getParam("precoMedia")}
-          />          
+          />
         </View>
       </>
       <>
@@ -102,7 +104,7 @@ function Mecanica({ navigation }) {
               <View key={avaliacao._id}>
                 <Text style={styles.mecAvaliacao}>Nome: {avaliacao.nome}</Text>
                 <Text style={styles.mecAvaliacao}>Descrição: {avaliacao.descricao}</Text>
-              <Rating
+                <Rating
                   style={styles.aval}
                   imageSize={15}
                   readonly
@@ -124,7 +126,7 @@ function Mecanica({ navigation }) {
           }}
           style={styles.avaliar}
           title="Avaliar"
-         />
+        />
       </>
     </>
   );
@@ -138,28 +140,29 @@ const styles = StyleSheet.create({
   },
   containerSafe: {
     flex: 1,
-    marginTop:Constants.statusBarCenter,
+    marginTop: Constants.statusBarCenter,
     backgroundColor: "#87CEEB",
   },
   scrollView: {
     backgroundColor: "#87CEEB",
     marginHorizontal: 20,
   },
-  desc:{
+  desc: {
     fontWeight: "bold",
   },
-  mecName:{
+  mecName: {
     marginTop: 13,
     fontWeight: "bold",
     alignSelf: 'center',
-    fontSize: 20
+    fontSize: 20,
+    marginLeft: 45
   },
-   mecInfo: {
+  mecInfo: {
     color: '#4F4F4F',
     fontSize: 14,
-    marginTop: 8,
+    marginTop: 10,
     width: 300,
-    alignSelf:"center",
+    alignSelf: "center",
   },
   mecButton: {
     backgroundColor: "red",
@@ -169,18 +172,21 @@ const styles = StyleSheet.create({
     color: '#4F4F4F',
     marginTop: 7,
     width: 300,
-    alignSelf:"center",
+    alignSelf: "center",
   },
   femin: {
-    marginTop:5,
-    alignSelf:"center",
-    flexDirection: "row-reverse",
+    marginLeft: 40,
   },
-  dolar:{
+  dolar: {
     marginTop: 5,
   },
-  aval:{
+  aval: {
     marginTop: 5,
+  },
+  view:{
+    flex: 0.3,
+    alignItems: "center",
+    flexDirection: "row",
   }
 });
 
