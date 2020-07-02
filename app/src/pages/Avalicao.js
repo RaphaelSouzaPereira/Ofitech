@@ -55,12 +55,7 @@ function Avaliacao({ navigation }) {
           style={styles.avaliaInput}
           onChangeText={(text) => onChangeNome(text)}
         />
-        <Text style={styles.info}>Descrição:</Text>
-        <TextInput
-          style={styles.avaliaInput}
-          onChangeText={(text) => onChangeText(text)}
-        />
-
+        
         <Text style={styles.info}>Genêro:</Text>
         <Picker
           selectedValue={genero}
@@ -71,6 +66,12 @@ function Avaliacao({ navigation }) {
           <Picker.Item label="masculino" value="masculino" />
           <Picker.Item label="outro" value="outro" />
         </Picker>
+        <Text style={styles.info}>Descrição:</Text>
+        <TextInput
+          style={styles.avaliaInput}
+          onChangeText={(text) => onChangeText(text)}
+        />
+
         <Rating
           style={styles.aval}
           showRating

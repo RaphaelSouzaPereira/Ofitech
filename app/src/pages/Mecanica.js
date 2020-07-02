@@ -151,11 +151,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   mecName: {
-    marginTop: 13,
     fontWeight: "bold",
-    alignSelf: 'center',
     fontSize: 20,
-    marginLeft: 45
+    marginLeft: 55,
   },
   mecInfo: {
     color: '#4F4F4F',
@@ -184,6 +182,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   view:{
+    marginTop: 10,
     flex: 0.3,
     alignItems: "center",
     flexDirection: "row",
